@@ -1,6 +1,15 @@
 <template>
-  <h1>Dashboard</h1>
-  <button @click.prevent="handleLogout">Logout</button>
+  <Suspense>
+    <template #default>
+      <div>
+        <h1>Dashboard</h1>
+        <button @click.prevent="handleLogout">Logout</button>
+      </div>
+    </template>
+    <template #fallback>
+      <div>Loading...</div>
+    </template>
+  </Suspense>
 </template>
 
 <script lang="ts">

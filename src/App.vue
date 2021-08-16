@@ -2,14 +2,11 @@
   <router-view />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { onMounted } from 'vue'
 
-export default defineComponent({
-  name: 'App',
-  created() {
-    localStorage.clear()
-  },
+onMounted(() => {
+  window.localStorage.clear()
 })
 </script>
 

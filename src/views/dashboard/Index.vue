@@ -37,7 +37,7 @@ const handleCloseModal = () => {
           <div class="flex flex-wrap">
             <Popover class="relative">
               <PopoverButton
-                class="flex items-center justify-center bg-indigo-600 text-white w-12 h-12 text-lg mx-1 rounded"
+                class="c-toolbar-item"
               >
                 <i class="ri-list-check"></i>
               </PopoverButton>
@@ -50,14 +50,14 @@ const handleCloseModal = () => {
                 leave-to-class="translate-y-1 opacity-0"
               >
                 <PopoverPanel
-                  class="absolute z-10 w-screen max-w-sm border-4 border-indigo-600 rounded mt-3 transform left-0"
+                  class="absolute z-10 w-screen max-w-sm border-4 border-green-600 rounded mt-3 transform left-0"
                 >
                   <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                     <div class="relative bg-white max-h-[240px] overflow-y-auto">
                       <div
                         v-for="n in 20"
                         :key="n"
-                        class="flex flex-wrap items-center px-3 py-2 border-b border-indigo-400"
+                        class="flex flex-wrap items-center px-3 py-2 border-b border-green-600"
                       >
                         <div class="w-8 text-lg">
                           <i class="ri-questionnaire-line"></i>
@@ -70,7 +70,7 @@ const handleCloseModal = () => {
               </transition>
             </Popover>
             <button
-              class="flex items-center justify-center bg-indigo-600 text-white w-12 h-12 text-lg mx-1 rounded"
+              class="c-toolbar-item"
               @click="handleSubmit"
             >
               <i class="ri-logout-box-line"></i>
@@ -128,41 +128,12 @@ const handleCloseModal = () => {
                     <div class="mt-6 text-center">
                       <button
                         type="button"
-                        class="
-                          relative
-                          inline-flex
-                          justify-center
-                          py-2
-                          px-3
-                          border
-                          border-indigo-600
-                          font-medium
-                          rounded-md
-                          text-indigo-600
-                          min-w-[120px]
-                          mr-2
-                        "
+                        class="c-button c-button-outline min-w-[120px] mr-2"
                         @click="handleCloseModal"
                       >
                         No
                       </button>
-                      <button
-                        type="button"
-                        class="
-                          relative
-                          inline-flex
-                          justify-center
-                          py-2
-                          px-3
-                          border border-transparent
-                          font-medium
-                          rounded-md
-                          text-white
-                          bg-indigo-600
-                          min-w-[120px]
-                        "
-                        @click="handleLogout"
-                      >
+                      <button type="button" class="c-button c-button-primary min-w-[120px]" @click="handleLogout">
                         Yes
                       </button>
                     </div>
